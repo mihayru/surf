@@ -274,9 +274,11 @@
 }
 
 .surf-box {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    &__wrapper {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     &__inner {
         min-height: 750px;
         background: rgba( #1C2121, 0.85);
@@ -563,6 +565,10 @@
     height: 0;
     white-space: nowrap;
     text-align: right;
+}
+
+.travel-slider__inner {
+    z-index: 22;
 }
 
 .travel-slider__info-title {

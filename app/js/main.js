@@ -12,7 +12,11 @@ $(function() {
         slidesToShow: 4,
         slidesToScroll: 4,
         asNavFor: '.header__slider',
+        responsive: [{
+            breakpoint: 961,
+            settings: "unslick"
 
+        }]
     });
 
 
@@ -25,10 +29,17 @@ $(function() {
         nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/arrows-right.svg" alt=""></img>',
         asNavFor: '.slider-map',
         centerMode: true,
+        responsive: [{
+            breakpoint: 1210,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        }]
     });
 
     $('.slider-map').slick({
-        slidesToShow: 8,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         asNavFor: '.sufr-slider',
@@ -36,13 +47,20 @@ $(function() {
 
     });
 
+    /* $('.travel-slider__inner').slick({
+        infinite: true,
+        fade: true,
+        prevArrow: '<img class="slider-arrows slider-arrows__left" src="img/arrows-left.svg" alt=""></img>',
+        nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/arrows-right.svg" alt=""></img>',
+    }); */
 
-    $('.travel-slider').slick({
+    $('.holder-slider__inner, shop-slider__inner').slick({
         infinite: true,
         fade: true,
         prevArrow: '<img class="slider-arrows slider-arrows__left" src="img/arrows-left.svg" alt=""></img>',
         nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/arrows-right.svg" alt=""></img>',
     });
+
 
 
 
