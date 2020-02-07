@@ -133,31 +133,6 @@
     }
 }
 
-.menu-btn {
-    display: none;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    right: 20px;
-    z-index: 20;
-    top: 75px;
-    background-color: rgba(255, 255, 255, 0.1);
-    &__inner {
-        width: 40px;
-    }
-    &__line {
-        height: 5px;
-        background-color: $green;
-        +.menu-btn__line {
-            margin-top: 5px;
-        }
-    }
-}
-
 // sdelat hover // 
 .header__search {
     padding-bottom: 18px;
@@ -274,11 +249,9 @@
 }
 
 .surf-box {
-    &__wrapper {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     &__inner {
         min-height: 750px;
         background: rgba( #1C2121, 0.85);
@@ -337,7 +310,6 @@
     margin: 0 auto;
     .slick-list {
         min-height: 635px;
-        overflow: visible;
     }
     .slick-current {
         .slider-dots__content {
@@ -406,7 +378,6 @@
     height: 24px;
     background-color: $green;
     border-radius: 50%;
-    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
 }
 
 // намутити треугольник //
@@ -417,6 +388,7 @@
     position: absolute;
     bottom: 35px;
     transform: translateX(-50%);
+    z-index: 1;
     &::before {
         content: "";
         position: absolute;
@@ -425,10 +397,7 @@
         border-bottom: 20px solid $green;
         border-left: 12px solid transparend;
         border-right: 12px solid transparend;
-        bottom: -21px;
-        left: calc(50% -1px);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        left: -50px;
     }
 }
 
@@ -441,9 +410,6 @@
     left: 0;
     .slider-dots__content {
         transform: translateX(0);
-    }
-    &::before {
-        left: calc (0px - .5px)
     }
 }
 
@@ -496,7 +462,7 @@
     .slider-dots__content {
         transform: translateX(-100%);
         &::before {
-            left: 0.5px;
+            left: auto;
         }
     }
 }
@@ -516,7 +482,7 @@
         min-height: 780px;
     }
     &__descr {
-        padding: 160px 0 0 132px;
+        padding: 215px 0 0 6px;
         min-height: 320px;
         margin-top: -230px;
         background-repeat: no-repeat;
@@ -565,10 +531,6 @@
     height: 0;
     white-space: nowrap;
     text-align: right;
-}
-
-.travel-slider__inner {
-    z-index: 22;
 }
 
 .travel-slider__info-title {
